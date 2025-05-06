@@ -1,5 +1,92 @@
 # Generic Agentic Development AI-KIT: Architecture
 
+## Visual Overview
+
+### Component Structure & Relationships
+
+```mermaid
+graph LR
+    A[Generic Agentic Development AI-KIT] --> B[agent_rules/]
+    A --> C[doc_templates/]
+    A --> D[guidelines/]
+    A --> E[principles/]
+    A --> F[specifications/]
+    A --> G[strategies/]
+    A --> H[README.md]
+    
+    subgraph "Actors"
+        B --> B1[Master Orchestrator]
+        B --> B2[Code Quality Guardian]
+        B --> B3[Documentation Manager]
+        B --> B4[Operations Analyst]
+        B --> B5[USER_RULES.md]
+    end
+    
+    subgraph "Artifacts"
+        C --> C1[Architecture Doc]
+        C --> C2[API Documentation]
+        C --> C3[Project Overview]
+        C --> C4[Operational Reports]
+        
+        F --> F1[Requirements Spec]
+        F --> F2[Use Case Spec]
+        F --> F3[User Story Template]
+    end
+    
+    subgraph "Rules"
+        D --> D1[Coding Standards]
+        D --> D2[Security Checklist]
+        D --> D3[Deployment Process]
+        D --> D4[Logging Guidelines]
+        
+        E --> E1[Context Management]
+        E --> E2[Workflow Principles]
+    end
+    
+    subgraph "Integration"
+        G --> G1[CI/CD Integration]
+        G --> G2[Task Tracking]
+        G --> G3[Tool Configuration]
+    end
+```
+
+### Setup & Installation Flow
+
+```mermaid
+flowchart LR
+    A[Start Setup] --> B[Add Kit to Workspace]
+    B --> C[Configure Cursor Settings]
+    C --> D[Setup User Rule]
+    D --> E[Configure MCPs]
+    E --> F[Define Agent Application Strategy]
+    F --> G[Ready to Use]
+    
+    B --> B1[File > Add Folder to Workspace]
+    C --> C1[Configure AI Settings]
+    D --> D1[Customize USER_RULES.md]
+    D --> D2[Add to Cursor Rules]
+    E --> E1[Configure mcp.json]
+    F --> F1[Set Rule Application Strategy]
+```
+
+### Typical Usage Workflow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AI
+    participant Templates
+    participant Guidelines
+    
+    User->>AI: Request with role reference
+    User->>AI: Reference specific templates
+    AI->>Templates: Access & apply template
+    AI->>Guidelines: Adhere to standards
+    AI->>User: Deliver structured output
+    User->>AI: Provide feedback
+    AI->>User: Refine based on feedback
+```
+
 ## 1. Purpose & Philosophy
 
 The Generic Agentic Development AI-KIT is a framework-agnostic, language-agnostic toolkit designed to provide a structured foundation for integrating AI agents into the software development lifecycle (SDLC). Its primary purpose is to enhance developer productivity, promote consistency, and facilitate more effective collaboration between humans and AI.

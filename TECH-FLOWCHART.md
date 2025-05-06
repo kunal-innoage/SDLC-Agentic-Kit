@@ -3,7 +3,7 @@
 ## Component Structure & Relationships
 
 ```mermaid
-graph TD
+graph LR
     A[Generic Agentic Development AI-KIT] --> B[agent_rules/]
     A --> C[doc_templates/]
     A --> D[guidelines/]
@@ -46,6 +46,25 @@ graph TD
         G --> G2[Task Tracking]
         G --> G3[Tool Configuration]
     end
+```
+
+## Setup & Installation Flow
+
+```mermaid
+flowchart LR
+    A[Start Setup] --> B[Add Kit to Workspace]
+    B --> C[Configure Cursor Settings]
+    C --> D[Setup User Rule]
+    D --> E[Configure MCPs]
+    E --> F[Define Agent Application Strategy]
+    F --> G[Ready to Use]
+    
+    B --> B1[File > Add Folder to Workspace]
+    C --> C1[Configure AI Settings]
+    D --> D1[Customize USER_RULES.md]
+    D --> D2[Add to Cursor Rules]
+    E --> E1[Configure mcp.json]
+    F --> F1[Set Rule Application Strategy]
 ```
 
 ## Interaction Workflow

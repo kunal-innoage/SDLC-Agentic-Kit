@@ -1,6 +1,24 @@
 # Generic Agentic Development AI-KIT: Architecture
 
-## Visual Overview
+## 1. Purpose & Philosophy
+
+The Generic Agentic Development AI-KIT is a framework-agnostic, language-agnostic toolkit designed to provide a structured foundation for integrating AI agents into the software development lifecycle (SDLC). Its primary purpose is to enhance developer productivity, promote consistency, and facilitate more effective collaboration between humans and AI.
+
+### Core Philosophy: Structured Flexibility
+
+The kit is built on the principle of **structured flexibility**:
+- **Adaptability:** Designed to be modified for any project type
+- **Consistency:** Promotes uniform documentation and standards
+- **Leverage:** Enables effective utilization of AI capabilities
+- **Generality:** Remains independent of specific programming languages or frameworks
+
+### Guiding Principles
+
+- **Context-Driven Interaction:** Prioritizes clear context for better AI outcomes
+- **Task Isolation:** Focuses each interaction on single, well-defined tasks
+- **Standard Reference:** References established standards rather than reinventing them
+- **Iterative Refinement:** Starts broad and refines based on responses
+- **Role Specialization:** Leverages distinct AI roles for specific SDLC tasks
 
 ### Component Structure & Relationships
 
@@ -49,63 +67,6 @@ graph LR
         G --> G3[Tool Configuration]
     end
 ```
-
-### Setup & Installation Flow
-
-```mermaid
-flowchart LR
-    A[Start Setup] --> B[Add Kit to Workspace]
-    B --> C[Configure Cursor Settings]
-    C --> D[Setup User Rule]
-    D --> E[Configure MCPs]
-    E --> F[Define Agent Application Strategy]
-    F --> G[Ready to Use]
-    
-    B --> B1[File > Add Folder to Workspace]
-    C --> C1[Configure AI Settings]
-    D --> D1[Customize USER_RULES.md]
-    D --> D2[Add to Cursor Rules]
-    E --> E1[Configure mcp.json]
-    F --> F1[Set Rule Application Strategy]
-```
-
-### Typical Usage Workflow
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant AI
-    participant Templates
-    participant Guidelines
-    
-    User->>AI: Request with role reference
-    User->>AI: Reference specific templates
-    AI->>Templates: Access & apply template
-    AI->>Guidelines: Adhere to standards
-    AI->>User: Deliver structured output
-    User->>AI: Provide feedback
-    AI->>User: Refine based on feedback
-```
-
-## 1. Purpose & Philosophy
-
-The Generic Agentic Development AI-KIT is a framework-agnostic, language-agnostic toolkit designed to provide a structured foundation for integrating AI agents into the software development lifecycle (SDLC). Its primary purpose is to enhance developer productivity, promote consistency, and facilitate more effective collaboration between humans and AI.
-
-### Core Philosophy: Structured Flexibility
-
-The kit is built on the principle of **structured flexibility**:
-- **Adaptability:** Designed to be modified for any project type
-- **Consistency:** Promotes uniform documentation and standards
-- **Leverage:** Enables effective utilization of AI capabilities
-- **Generality:** Remains independent of specific programming languages or frameworks
-
-### Guiding Principles
-
-- **Context-Driven Interaction:** Prioritizes clear context for better AI outcomes
-- **Task Isolation:** Focuses each interaction on single, well-defined tasks
-- **Standard Reference:** References established standards rather than reinventing them
-- **Iterative Refinement:** Starts broad and refines based on responses
-- **Role Specialization:** Leverages distinct AI roles for specific SDLC tasks
 
 ## 2. Core Components
 
@@ -161,6 +122,24 @@ The components of the kit interact in complementary ways to support the developm
 4. The AI, guided by its role definition, creates documentation following the template
 5. The work adheres to guidelines referenced by both the user and AI
 
+### Typical Usage Workflow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AI
+    participant Templates
+    participant Guidelines
+    
+    User->>AI: Request with role reference
+    User->>AI: Reference specific templates
+    AI->>Templates: Access & apply template
+    AI->>Guidelines: Adhere to standards
+    AI->>User: Deliver structured output
+    User->>AI: Provide feedback
+    AI->>User: Refine based on feedback
+```
+
 ## 4. Key Features
 
 ### Role-Based AI Interaction
@@ -190,6 +169,25 @@ The components of the kit interact in complementary ways to support the developm
 2. Customize `USER_RULES.md` to define your role and project context
 3. Modify any templates or guidelines to match project requirements
 4. Configure any relevant Cursor-specific features (e.g., MCPs)
+
+### Setup & Installation Flow
+
+```mermaid
+flowchart LR
+    A[Start Setup] --> B[Add Kit to Workspace]
+    B --> C[Configure Cursor Settings]
+    C --> D[Setup User Rule]
+    D --> E[Configure MCPs]
+    E --> F[Define Agent Application Strategy]
+    F --> G[Ready to Use]
+    
+    B --> B1[File > Add Folder to Workspace]
+    C --> C1[Configure AI Settings]
+    D --> D1[Customize USER_RULES.md]
+    D --> D2[Add to Cursor Rules]
+    E --> E1[Configure mcp.json]
+    F --> F1[Set Rule Application Strategy]
+```
 
 ### Interaction Flow
 1. Reference relevant kit components when interacting with AI

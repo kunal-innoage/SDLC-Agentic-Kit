@@ -1,6 +1,18 @@
 # Generic Agentic Development AI-KIT
 
-## Visual Overview
+This repository contains a comprehensive, framework-agnostic toolkit for establishing effective agentic development workflows in software projects. The AI-KIT provides templates, guidelines, and best practices for integrating AI agents (like those in Cursor) into your development lifecycle, serving as a foundation for building your team's **Context Repository**.
+
+## Overview & Philosophy
+
+The Generic Agentic Development AI-KIT provides a foundational structure for:
+
+1. **Defining specialized AI agent roles** with clear responsibilities and workflows (see `agent_rules/`).
+2. **Establishing standard document templates** for consistent project documentation (see `doc_templates/`).
+3. **Implementing coding and operational guidelines** for maintainable and efficient systems (see `guidelines/`).
+4. **Defining core principles** for effective context management and agent interaction (see `principles/`).
+5. **Outlining integration strategies** for connecting agent workflows with development tools (see `strategies/`).
+
+**Philosophy:** This kit is designed to be a **flexible starting point**, not a rigid prescription. Its purpose is to provide reusable, generic assets that you can adapt to your specific project needs, technology stack, team roles, and development methodology. It encourages structured interaction with AI agents, promoting consistency and leveraging AI capabilities more effectively across the software development lifecycle.
 
 ### Kit Structure & Component Relationships
 
@@ -49,83 +61,6 @@ graph LR
         G --> G3[Tool Configuration]
     end
 ```
-
-### Setup & Installation Process
-
-```mermaid
-flowchart LR
-    A[Start Setup] --> B[Add Kit to Workspace]
-    B --> C[Configure Cursor Settings]
-    C --> D[Setup User Rule]
-    D --> E[Configure MCPs]
-    E --> F[Define Agent Application Strategy]
-    F --> G[Ready to Use]
-    
-    B --> B1[File > Add Folder to Workspace]
-    C --> C1[Configure AI Settings]
-    D --> D1[Customize USER_RULES.md]
-    D --> D2[Add to Cursor Rules]
-    E --> E1[Configure mcp.json]
-    F --> F1[Set Rule Application Strategy]
-```
-
-### Kit Usage Workflow
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant AI
-    participant Templates
-    participant Guidelines
-    
-    User->>AI: Request with role reference
-    User->>AI: Reference specific templates
-    AI->>Templates: Access & apply template
-    AI->>Guidelines: Adhere to standards
-    AI->>User: Deliver structured output
-    User->>AI: Provide feedback
-    AI->>User: Refine based on feedback
-```
-
-### Context Repository Evolution
-
-```mermaid
-flowchart LR
-    A[Base Kit] --> B[Initial Setup<br>1-3 months]
-    B --> C[Expansion & Refinement<br>3-6 months]
-    C --> D[Optimization & Integration<br>6-12 months]
-    D --> E[Mature Evolution<br>Ongoing]
-    
-    B --> B1[Customize templates]
-    B --> B2[Establish usage patterns]
-    B --> B3[Identify gaps]
-    
-    C --> C1[Add domain-specific templates]
-    C --> C2[Refine agent roles]
-    C --> C3[Develop workflows]
-    
-    D --> D1[Optimize for efficiency]
-    D --> D2[Integrate with tools]
-    D --> D3[Expand cross-references]
-    
-    E --> E1[Align with new technologies]
-    E --> E2[Incorporate new AI capabilities]
-    E --> E3[Refactor as needed]
-```
-
-This repository contains a comprehensive, framework-agnostic toolkit for establishing effective agentic development workflows in software projects. The AI-KIT provides templates, guidelines, and best practices for integrating AI agents (like those in Cursor) into your development lifecycle, serving as a foundation for building your team's **Context Repository**.
-
-## Overview & Philosophy
-
-The Generic Agentic Development AI-KIT provides a foundational structure for:
-
-1. **Defining specialized AI agent roles** with clear responsibilities and workflows (see `agent_rules/`).
-2. **Establishing standard document templates** for consistent project documentation (see `doc_templates/`).
-3. **Implementing coding and operational guidelines** for maintainable and efficient systems (see `guidelines/`).
-4. **Defining core principles** for effective context management and agent interaction (see `principles/`).
-5. **Outlining integration strategies** for connecting agent workflows with development tools (see `strategies/`).
-
-**Philosophy:** This kit is designed to be a **flexible starting point**, not a rigid prescription. Its purpose is to provide reusable, generic assets that you can adapt to your specific project needs, technology stack, team roles, and development methodology. It encourages structured interaction with AI agents, promoting consistency and leveraging AI capabilities more effectively across the software development lifecycle.
 
 ### The Context Repository Concept
 
@@ -194,6 +129,25 @@ This section guides you through setting up the `generic-agentic-kit` alongside y
 ### Prerequisites
 
 *   **Cursor Installation:** Ensure you have Cursor installed. Download it from [cursor.sh](https://cursor.sh/).
+
+### Setup & Installation Process
+
+```mermaid
+flowchart LR
+    A[Start Setup] --> B[Add Kit to Workspace]
+    B --> C[Configure Cursor Settings]
+    C --> D[Setup User Rule]
+    D --> E[Configure MCPs]
+    E --> F[Define Agent Application Strategy]
+    F --> G[Ready to Use]
+    
+    B --> B1[File > Add Folder to Workspace]
+    C --> C1[Configure AI Settings]
+    D --> D1[Customize USER_RULES.md]
+    D --> D2[Add to Cursor Rules]
+    E --> E1[Configure mcp.json]
+    F --> F1[Set Rule Application Strategy]
+```
 
 ### Step 1: Add Kit to Your Workspace
 
@@ -298,6 +252,24 @@ With these steps completed, Cursor is configured to work with your project and t
 
 Now that setup is complete, instruct the AI agent within Cursor to reference specific files from the kit when performing tasks:
 
+### Kit Usage Workflow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant AI
+    participant Templates
+    participant Guidelines
+    
+    User->>AI: Request with role reference
+    User->>AI: Reference specific templates
+    AI->>Templates: Access & apply template
+    AI->>Guidelines: Adhere to standards
+    AI->>User: Deliver structured output
+    User->>AI: Provide feedback
+    AI->>User: Refine based on feedback
+```
+
 *   **Applying Agent Rules:**
     *   `@agent_rules adopt the role described in generic-agentic-kit/agent_rules/code_quality_guardian_template.md and review my recent code changes in 'YOUR_PROJECT/...'`
     *   `Follow the error handling protocol defined in generic-agentic-kit/agent_rules/master_orchestrator_template.md.`
@@ -319,6 +291,32 @@ Now that setup is complete, instruct the AI agent within Cursor to reference spe
 ## Growing Your Context Repository
 
 The kit is designed to evolve over time, becoming increasingly valuable as you customize and extend it:
+
+### Context Repository Evolution
+
+```mermaid
+flowchart LR
+    A[Base Kit] --> B[Initial Setup<br>1-3 months]
+    B --> C[Expansion & Refinement<br>3-6 months]
+    C --> D[Optimization & Integration<br>6-12 months]
+    D --> E[Mature Evolution<br>Ongoing]
+    
+    B --> B1[Customize templates]
+    B --> B2[Establish usage patterns]
+    B --> B3[Identify gaps]
+    
+    C --> C1[Add domain-specific templates]
+    C --> C2[Refine agent roles]
+    C --> C3[Develop workflows]
+    
+    D --> D1[Optimize for efficiency]
+    D --> D2[Integrate with tools]
+    D --> D3[Expand cross-references]
+    
+    E --> E1[Align with new technologies]
+    E --> E2[Incorporate new AI capabilities]
+    E --> E3[Refactor as needed]
+```
 
 1. **Initial Setup (1-3 months):**
    * Customize essential templates to your environment

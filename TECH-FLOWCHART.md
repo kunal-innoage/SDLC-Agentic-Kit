@@ -1,5 +1,9 @@
 # Generic Agentic Development AI-KIT: Technical Flowchart
 
+## Purpose
+
+This document provides visual representations of the Generic Agentic Development AI-KIT's architecture, workflows, and integration patterns. These diagrams help users understand how components relate to each other and how to effectively implement the kit in their development environment.
+
 ## Component Structure & Relationships
 
 ```mermaid
@@ -173,3 +177,4 @@ flowchart TD
     J --> K[Iterative Improvement]
     K --> C
 ```
+
